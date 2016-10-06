@@ -11,7 +11,7 @@ project "SFML"
        "include"
     }
 
-    # TODO ios and android!
+    --TODO ios and android!
 
     zpm.export(function()
      
