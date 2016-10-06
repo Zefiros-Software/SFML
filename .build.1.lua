@@ -8,7 +8,8 @@ project "SFML"
     }
 
     includedirs {
-       "include"
+       "include",
+       "src"
     }
 
     --TODO ios and android!
