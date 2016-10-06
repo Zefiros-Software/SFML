@@ -4,7 +4,10 @@ project "SFML"
     kind "StaticLib"
  
     files {
-       "src/**.cpp"
+       "src/Main/**.cpp",
+       "src/Network/**.cpp",
+       "src/System/**.cpp",
+       "src/Window/**.cpp",
     }
 
     includedirs {
