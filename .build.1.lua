@@ -12,6 +12,7 @@ project "SFML"
     removefiles {
        "src/SFML/Audio/**.cpp",
        "src/SFML/Graphics/**.cpp",
+       "src/SFML/Main/**.cpp",
        "src/SFML/System/Android/**.cpp", 
        "src/SFML/System/Unix/**.cpp", 
        "src/SFML/System/Win32/**.cpp", 
