@@ -3,14 +3,16 @@ project "SFML"
 
     kind "StaticLib"
  
+    
+
     files {
-       "src/Main/**.cpp",
-       "src/Network/**.cpp",
-       "src/System/**.cpp",
-       "src/Window/**.cpp",
-       "src/Graphics/**.cpp"
+       "src/**.cpp"
     }
 
+    removefiles {
+       "src/Audio/**.cpp"
+    }  
+ 
     includedirs {
        "include",
        "src"
