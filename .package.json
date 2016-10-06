@@ -1,0 +1,6 @@
+{
+    "name": "Zefiros-Software/SFML",
+    "postextract": "SFML.lua",
+    "requires": [
+    ]
+}
