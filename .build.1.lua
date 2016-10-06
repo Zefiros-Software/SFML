@@ -8,6 +8,7 @@ project "SFML"
        "src/Network/**.cpp",
        "src/System/**.cpp",
        "src/Window/**.cpp",
+       "src/Graphics/**.cpp"
     }
 
     includedirs {
