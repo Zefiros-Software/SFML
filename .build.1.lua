@@ -10,7 +10,7 @@ project "SFML"
     }
 
     removefiles {
-       "src/Audio/**.cpp"
+       "src/SFML/Audio/**.cpp"
     }  
  
     includedirs {
