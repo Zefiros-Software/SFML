@@ -22,7 +22,8 @@ project "SFML"
     	}
  
 	removefiles {
-	    "src/SFML/Window/EGLCheck.cpp"
+	    "src/SFML/Window/EGLCheck.cpp",
+            "src/SFML/Window/EglContext.cpp"
         }
    
     filter "system:linux"
@@ -34,7 +35,8 @@ project "SFML"
         }
 
         removefiles {
-            "src/SFML/Window/EGLCheck.cpp"
+            "src/SFML/Window/EGLCheck.cpp",
+            "src/SFML/Window/EglContext.cpp"
         }
     
     filter "system:macosx"
@@ -46,7 +48,8 @@ project "SFML"
         } 
     
 	removefiles {
-            "src/SFML/Window/EGLCheck.cpp"
+            "src/SFML/Window/EGLCheck.cpp",
+            "src/SFML/Window/EglContext.cpp"
         }
 
     filter "action:android"
