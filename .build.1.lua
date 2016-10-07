@@ -3,7 +3,8 @@ project "SFML"
 
     kind "StaticLib"
  
-    
+    print ( "DEBUG" );
+    print ( _ACTION );   
 
     files {
        "src/**.cpp"
