@@ -46,7 +46,8 @@ project "SFML"
        "src/SFML/Network/Unix/*.cpp",
        "src/SFML/System/Unix/*.cpp",
        "src/SFML/Window/OSX/*.cpp",
-       "src/SFML/Window/OSX/*.mm"
+       "src/SFML/Window/OSX/*.mm",
+       "src/SFML/Window/OSX/*.m"
         } 
 
 	removefiles {
