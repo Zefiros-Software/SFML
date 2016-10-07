@@ -75,7 +75,13 @@ project "SFML"
     --TODO ios and android!
 
     zpm.export(function()
-     
+ 
+	filter "system:macosx"
+
+	links { "CoreFoundation" }
+	
+	filter {}
+	    
         includedirs { 
             "include"
         }
