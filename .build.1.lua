@@ -39,13 +39,14 @@ project "SFML"
             "src/SFML/Window/EglContext.cpp"
         }
  
-    filter "action:gmake"   
-    --filter "system:macosx"
+    --filter "action:gmake"   
+    filter "system:macosx"
     
        files {
        "src/SFML/Network/Unix/*.cpp",
        "src/SFML/System/Unix/*.cpp",
-       "src/SFML/Window/OSX/*.cpp"
+       "src/SFML/Window/OSX/*.cpp",
+       "src/SFML/Window/OSX/*.mm"
         } 
 
 	removefiles {
