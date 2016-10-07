@@ -20,13 +20,21 @@ project "SFML"
        "src/SFML/System/Win32/*.cpp",
        "src/SFML/Window/Win32/*.cpp"
     	}
-    
+ 
+	removefiles {
+	    "src/SFML/Window/EGLCheck.cpp"
+        }
+   
     filter "system:linux"
     
        files {
        "src/SFML/Network/Unix/*.cpp",
        "src/SFML/System/Unix/*.cpp",
        "src/SFML/Window/Unix/*.cpp"
+        }
+
+        removefiles {
+            "src/SFML/Window/EGLCheck.cpp"
         }
     
     filter "system:macosx"
@@ -37,6 +45,10 @@ project "SFML"
        "src/SFML/Window/OSX/*.cpp"
         } 
     
+	removefiles {
+            "src/SFML/Window/EGLCheck.cpp"
+        }
+
     filter "action:android"
  
        files {
