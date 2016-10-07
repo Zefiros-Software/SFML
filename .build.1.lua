@@ -46,8 +46,6 @@ project "SFML"
        "src/SFML/System/Unix/*.cpp",
        "src/SFML/Window/OSX/*.cpp"
         } 
-    
-	links { "CoreFoundation" }
 
 	removefiles {
             "src/SFML/Window/EGLCheck.cpp",
@@ -77,9 +75,7 @@ project "SFML"
     zpm.export(function()
  
 	filter "system:macosx"
-
-	links { "CoreFoundation" }
-	libdirs { "/System/Library/Frameworks/" }	
+            linkoptions { "-framework CoreFoundation" }
 
 	filter {}
 	    
