@@ -79,7 +79,8 @@ project "SFML"
 	filter "system:macosx"
 
 	links { "CoreFoundation" }
-	
+	libdirs { "/System/Library/Frameworks/" }	
+
 	filter {}
 	    
         includedirs { 
