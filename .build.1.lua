@@ -47,6 +47,8 @@ project "SFML"
        "src/SFML/Window/OSX/*.cpp"
         } 
     
+	links { "CoreFoundation" }
+
 	removefiles {
             "src/SFML/Window/EGLCheck.cpp",
             "src/SFML/Window/EglContext.cpp"
