@@ -78,7 +78,8 @@ project "SFML"
     zpm.export(function()
  
 	filter "system:macosx"
-            linkoptions { "-framework Foundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
+
+            linkoptions { "-framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
 
 	filter {}
 	    
