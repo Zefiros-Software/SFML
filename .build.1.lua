@@ -47,7 +47,7 @@ project "SFML"
        "src/SFML/System/Unix/*.cpp",
        "src/SFML/Window/OSX/*.cpp",
        "src/SFML/Window/OSX/*.hpp",
-       "src/SFML/Window/OSX/*.h,"
+       "src/SFML/Window/OSX/*.h",
        "src/SFML/Window/OSX/*.mm",
        "src/SFML/Window/OSX/*.m",
        "src/SFML/Window/OSX/SFOpenGLView+keyboard.mm"
