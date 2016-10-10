@@ -14,6 +14,13 @@ project "SFML"
 
     -- generic
     files {
+       "include/SFML/*.hpp", 
+       "include/SFML/Network/*.hpp",
+       "include/SFML/System/*.hpp",
+       "include/SFML/Window/*.hpp",
+       "include/SFML/Network/*.inl",
+       "include/SFML/System/*.inl",
+       "include/SFML/Window/*.inl",
        "src/SFML/Network/*.cpp",
        "src/SFML/System/*.cpp",
        "src/SFML/Window/*.cpp"
