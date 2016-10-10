@@ -92,6 +92,15 @@ project "SFML"
 
     zpm.export(function()
  
+        defines
+    {
+        "SFML_SYSTEM_EXPORTS",
+        "SFML_AUDIO_EXPORTS",
+        "SFML_GRAPHICS_EXPORTS",
+        "SFML_WINDOW_EXPORTS",
+        "SFML_NETWORK_EXPORTS"
+    }
+
 	filter "system:macosx"
 
             linkoptions { "-framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
