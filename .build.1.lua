@@ -3,8 +3,14 @@ project "SFML"
 
     kind "StaticLib"
  
-    print ( "DEBUG" );
-    print ( _ACTION );   
+    defines
+    {
+        "SFML_SYSTEM_EXPORTS",
+        "SFML_AUDIO_EXPORTS",
+        "SFML_GRAPHICS_EXPORTS",
+        "SFML_WINDOW_EXPORTS",
+        "SFML_NETWORK_EXPORTS"
+    }
 
     -- generic
     files {
@@ -39,7 +45,6 @@ project "SFML"
             "src/SFML/Window/EglContext.cpp"
         }
  
-    --filter "action:gmake"   
     filter "system:macosx"
     
        files {
