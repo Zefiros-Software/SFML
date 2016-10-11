@@ -108,7 +108,8 @@ project "SFML-window"
      filter "system:macosx"
 
 	files
-	{
+ 	{
+            "src/SFML/Window/OSX/*.cpp",
             "src/SFML/Window/OSX/*.mm",
 	    "src/SFML/Window/OSX/*.m"
         }
