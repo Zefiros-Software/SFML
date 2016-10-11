@@ -134,8 +134,14 @@ project "SFML-window"
 
             linkoptions { "-ObjC -framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
 
+        filter "system:windows"
+		
+	    links { "OpenGL32", "Winmm" }
+
         filter {}
 
+  
+ 
         includedirs {
             "include"
         }
