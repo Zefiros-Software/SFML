@@ -2,7 +2,7 @@ project "SFML-system"
 
     kind "StaticLib"
  
-    defines { "SFML_SYSTEM_EXPORTS" }
+    defines { "SFML_STATIC" }
 
     includedirs {
        "include",
@@ -56,17 +56,16 @@ project "SFML-system"
         includedirs {
             "include"
         }
-
+     
+        defines { "SFML_STATIC" }
+ 
     end)
 
 project "SFML-window"
 
     kind "StaticLib"
  
-    defines
-    {
-        "SFML_WINDOW_EXPORTS"
-    }
+    defines { "SFML_STATIC" }
 
     includedirs {
        "include",
@@ -127,4 +126,22 @@ project "SFML-window"
         }
      
      filter{}
+
+    
+     zpm.export(function()
+
+        filter "system:macosx"
+
+            linkoptions { "-ObjC -framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
+
+        filter {}
+
+        includedirs {
+            "include"
+        }
+
+        defines { "SFML_STATIC" }
+
+    end)
+
 
