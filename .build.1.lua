@@ -2,7 +2,7 @@ project "SFML-system"
 
     kind "StaticLib"
  
-    defines { SFML_SYSTEM_EXPORTS" }
+    defines { "SFML_SYSTEM_EXPORTS" }
 
     -- generic
     files {
