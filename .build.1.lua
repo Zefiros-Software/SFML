@@ -144,7 +144,7 @@ project "SFML"
 
 	filter "system:macosx"
 
-            linkoptions { "-all_load -framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
+            linkoptions { "-ObjC -framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
 	 
 	filter {}
 	    
