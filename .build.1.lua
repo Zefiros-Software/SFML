@@ -4,6 +4,11 @@ project "SFML-system"
  
     defines { "SFML_SYSTEM_EXPORTS" }
 
+    includedirs {
+       "include",
+       "src"
+    }
+
     -- generic
     files {
        "include/SFML/System/*.inl",
@@ -62,6 +67,12 @@ project "SFML-window"
     {
         "SFML_WINDOW_EXPORTS"
     }
+
+    includedirs {
+       "include",
+       "src"
+    }
+
 
     -- generic
     files {
