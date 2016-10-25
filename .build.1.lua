@@ -1,6 +1,7 @@
 project "SFML-system"
 
     kind "StaticLib" 
+    includedirs "src"
 
     files {
        "include/SFML/System/*.inl",
@@ -47,7 +48,6 @@ project "SFML-system"
 project "SFML-window"
 
     kind "StaticLib" 
-
     includedirs "src"
 
     files {
