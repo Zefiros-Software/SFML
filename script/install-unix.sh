@@ -17,4 +17,5 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
     sudo apt-get install libglew-dev 
     sudo apt-get install libsndfile1-dev 
     sudo apt-get install libopenal-dev
+    sudo apt-get install libudev-dev
 fi
