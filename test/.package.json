@@ -1,0 +1,10 @@
+{
+    "name": "Zefiros-Software/SFML-Dev",
+    "requires": [
+        {
+            "name": "Zefiros-Software/SFML",
+            "version": "@head",
+            "buildpath": "../"
+        }
+    ]
+}
