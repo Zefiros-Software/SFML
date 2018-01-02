@@ -126,7 +126,8 @@ project "SFML-graphics"
     kind "StaticLib" 
     
     includedirs { "src",
-                  "extlibs/stb_image" }
+                  "extlibs/headers/stb_image",
+                  "extlibs/headers/freetype2" }
 
     files {
        "include/SFML/Graphics/*.inl",
