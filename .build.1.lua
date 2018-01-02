@@ -62,20 +62,20 @@ project "SFML-window"
            "src/SFML/Window/Win32/*.cpp"
        }
 
-       --removefiles {
-       --     "src/SFML/Window/EGLCheck.cpp",
-       --     "src/SFML/Window/EglContext.cpp"
-       --}
+       removefiles {
+            "src/SFML/Window/EGLCheck.cpp",
+            "src/SFML/Window/EglContext.cpp"
+       }
   
     filter "system:linux"   
        files {
             "src/SFML/Window/Unix/*.cpp"
         }
 
-        --removefiles {
-        --    "src/SFML/Window/EGLCheck.cpp",
-        --    "src/SFML/Window/EglContext.cpp"
-        --}
+        removefiles {
+            "src/SFML/Window/EGLCheck.cpp",
+            "src/SFML/Window/EglContext.cpp"
+        }
     
      filter "system:macosx"
 
@@ -85,10 +85,10 @@ project "SFML-window"
 	        "src/SFML/Window/OSX/*.m"
         }
         
-        --removefiles {
-        --        "src/SFML/Window/EGLCheck.cpp",
-        --        "src/SFML/Window/EglContext.cpp"
-        --    }
+        removefiles {
+                "src/SFML/Window/EGLCheck.cpp",
+                "src/SFML/Window/EglContext.cpp"
+           }
 
      filter "action:android"
  
@@ -124,7 +124,9 @@ project "SFML-window"
 project "SFML-graphics"
 
     kind "StaticLib" 
-    includedirs "src"
+    
+    includedirs { "src",
+                  "extlibs/stb_image" }
 
     files {
        "include/SFML/Graphics/*.inl",
