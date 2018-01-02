@@ -62,20 +62,20 @@ project "SFML-window"
            "src/SFML/Window/Win32/*.cpp"
        }
 
-       removefiles {
-            "src/SFML/Window/EGLCheck.cpp",
-            "src/SFML/Window/EglContext.cpp"
-       }
+       --removefiles {
+       --     "src/SFML/Window/EGLCheck.cpp",
+       --     "src/SFML/Window/EglContext.cpp"
+       --}
   
     filter "system:linux"   
        files {
             "src/SFML/Window/Unix/*.cpp"
         }
 
-        removefiles {
-            "src/SFML/Window/EGLCheck.cpp",
-            "src/SFML/Window/EglContext.cpp"
-        }
+        --removefiles {
+        --    "src/SFML/Window/EGLCheck.cpp",
+        --    "src/SFML/Window/EglContext.cpp"
+        --}
     
      filter "system:macosx"
 
@@ -85,10 +85,10 @@ project "SFML-window"
 	        "src/SFML/Window/OSX/*.m"
         }
         
-        removefiles {
-                "src/SFML/Window/EGLCheck.cpp",
-                "src/SFML/Window/EglContext.cpp"
-            }
+        --removefiles {
+        --        "src/SFML/Window/EGLCheck.cpp",
+        --        "src/SFML/Window/EglContext.cpp"
+        --    }
 
      filter "action:android"
  
@@ -97,6 +97,42 @@ project "SFML-window"
         }
      
      filter {}
+    
+     zpm.export(function()
+
+        defines "SFML_STATIC"
+ 
+        includedirs {
+            "include"
+        }
+
+        filter "system:macosx"
+
+            linkoptions { "-ObjC -framework CoreFoundation -framework AppKit -framework IOKit -framework Carbon -framework OpenGL" }
+
+        filter "system:windows"
+		
+	        links { 
+                "OpenGL32", 
+                "Winmm" 
+            }
+
+        filter {}  
+
+    end)
+
+project "SFML-graphics"
+
+    kind "StaticLib" 
+    includedirs "src"
+
+    files {
+       "include/SFML/Graphics/*.inl",
+       "src/SFML/Graphics/*.cpp"
+    }
+   
+    links { "SFML-system",
+            "SFML-window" }
     
      zpm.export(function()
 
