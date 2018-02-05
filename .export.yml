@@ -79,7 +79,7 @@ export: |
                 links { 
                     "OpenGL32", 
                     "Winmm",
-                    "gdi32
+                    "gdi32"
                 }
 
             filter {}  
