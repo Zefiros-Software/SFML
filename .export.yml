@@ -52,6 +52,13 @@ export: |
     project "SFML-system"
 
         buildSFML("System")
+        
+        filter "system:macosx"
+            files {
+                "src/SFML/Windows/Unix/*.cpp"
+            }
+        
+        filter {}
 
 
     project "SFML-window"
@@ -69,9 +76,6 @@ export: |
         
         filter "system:macosx"
             includedirs "/opt/X11/include"
-            files {
-                "src/SFML/Windows/Unix/*.cpp"
-            }
 
         filter {} 
     
