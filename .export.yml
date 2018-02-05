@@ -23,7 +23,7 @@ export: |
 
         filter "system:macosx"
             files {
-                ("src/SFML/%s/Unix/*.cpp"):format(lib),
+                ("src/SFML/%s/OSX/*.cpp"):format(lib),
                 ("src/SFML/%s/OSX/*.mm"):format(lib),
                 ("src/SFML/%s/OSX/*.m"):format(lib)
             }
