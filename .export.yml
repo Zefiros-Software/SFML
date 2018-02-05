@@ -55,7 +55,7 @@ export: |
         
         filter "system:macosx"
             files {
-                "src/SFML/Windows/Unix/*.cpp"
+                "src/SFML/System/Unix/*.cpp"
             }
         
         filter {}
@@ -67,13 +67,6 @@ export: |
     
         links "SFML-system"
 
-        filter "system:*"
-
-            removefiles {
-                "src/SFML/Window/EGLCheck.cpp",
-                "src/SFML/Window/EglContext.cpp"
-            }
-        
         filter "system:macosx"
             includedirs "/opt/X11/include"
 
@@ -85,7 +78,8 @@ export: |
             
                 links { 
                     "OpenGL32", 
-                    "Winmm" 
+                    "Winmm",
+                    "gdi32
                 }
 
             filter {}  
