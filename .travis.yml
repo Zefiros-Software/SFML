@@ -15,6 +15,8 @@ matrix:
     osx_image: xcode8
     language: generic
 install:
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libudev-dev fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo apt-get install libudev-dev fi
 - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/features/refactor/script/install-zpm.sh)"
 script:
 - cd test && zpm run test-definition SFML

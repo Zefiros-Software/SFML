@@ -66,12 +66,15 @@ export: |
                 "src/SFML/Window/EGLCheck.cpp",
                 "src/SFML/Window/EglContext.cpp"
             }
+        
+        filter "system:macosx"
+            includedirs "/opt/X11/include"
 
         filter {} 
     
         zpm.export(function()
 
-            filter "system:windows@@@@@@@@"
+            filter "system:windows"
             
                 links { 
                     "OpenGL32", 
