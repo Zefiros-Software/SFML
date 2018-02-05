@@ -51,12 +51,12 @@ export: |
 
     project "SFML-system"
 
-        buildSFML("system")
+        buildSFML("System")
 
 
     project "SFML-window"
 
-        buildSFML("window")
+        buildSFML("Window")
     
         links "SFML-system"
 
@@ -66,10 +66,12 @@ export: |
                 "src/SFML/Window/EGLCheck.cpp",
                 "src/SFML/Window/EglContext.cpp"
             }
+
+        filter {} 
     
         zpm.export(function()
 
-            filter "system:windows"
+            filter "system:windows@@@@@@@@"
             
                 links { 
                     "OpenGL32", 
