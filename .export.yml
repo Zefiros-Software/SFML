@@ -67,6 +67,13 @@ export: |
     
         links "SFML-system"
 
+        filter "system:*"
+
+            removefiles {
+                "src/SFML/Window/EGLCheck.cpp",
+                "src/SFML/Window/EglContext.cpp"
+            }
+        
         filter "system:macosx"
             includedirs "/opt/X11/include"
 
