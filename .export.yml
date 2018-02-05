@@ -69,6 +69,9 @@ export: |
         
         filter "system:macosx"
             includedirs "/opt/X11/include"
+            files {
+                "src/SFML/Windows/Unix/*.cpp
+            }
 
         filter {} 
     
