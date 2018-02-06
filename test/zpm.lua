@@ -25,11 +25,8 @@
 -- ]]
 
 workspace "SFML"
-   configurations { "Test" }
-   startproject "SFML"
-
+   
+    zefiros.testDefinition("SFML")
+    
     project "SFML"
-        kind "ConsoleApp"
-        files "main.cpp"
-
         zpm.uses "Zefiros-Software/SFML"
