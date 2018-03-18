@@ -8,17 +8,17 @@ matrix:
   - os: linux
     dist: trusty
     env: VERSION=7
-  - os: linux
-    dist: trusty
-    env: VERSION=5
   - os: osx
-    osx_image: xcode8
+    osx_image: xcode9.2
     language: generic
+global:
+  env:
+  - PROJECT=SFML
+  - PROJECT_TEMPLATE=default
 install:
-- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libxrandr-dev libudev-dev; fi
-- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/features/refactor/script/install-zpm.sh)"
+- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
 - cd test && zpm run test-definition SFML
 notifications:
   slack:
-    secure: w4Mc5EQ6Tz0ZiUJAHfm0zKQtAutExn9bEskg1Mmig3XL5K1vjLyxdH1qTYicyUszJkDGMh/SLD5UhB5QbpCF5nXDyO7L54b+G+XopimOKZ6yiqBI20U22jUwfcypMdNXqpTV1ktfrYxY5MipO7+wlifbWJNfJSzFnKw4ICsJm8sCh5CoYFgOummn3osFpq4L7+JS9nsvRaAepo8oec3xf7fIf00YckGo1nvACtYSHK9OD/oC3b4Fq5c0i1kfj6TJgQzVBSE8UOJzcC+0Xw3M5UUAy7JUfM4UYjA4tOz3DUFy3YyxWxjAg7j8OKyC/S8PuHFg3VujXVuAEN0kCzu4Fk3tY2aKsVXFYmRhEFXMOPUb9Z2MAo3fjwli9f+9/B2zF1djD5X7LibaUWIGhDDb0/Ysjz3NZWYFRt0ujfcix2A5xaeX8TeoxjL6cSAxQqzIooZOho0h5eIuvs8x34MOKeCywEbZvua1KqkmZFl87DXTy+sh7v3aQKGfwK1F+YUYIixC7/IBQ2nhNAx9GbX5SgTs6gb32IWYKaqkah4sT22Oc8EHI3TKt4GhVNwnvQbqwUxvGa/r6W2o9IoKaO1TmkrEmgdI8U8Y7tz6SWIw9rv7sXgkuWL6d0YRoQjEsroelEqHiNk2FHot0Q0mZTr4J+kvA8tbsv3LPqi5Vpwf0/U=
+    secure: cNjwNj0fYnGjnR9EbNb5GyBHy4eOe3GJ1oEkUXIZ7U9y/kMowANxMnJmRb914XAO2uEA3o/z1adsxZOCoUB6TsjpZSR9aVMyYXimog6Z1J8XYF6+JilzaFCKUCiednFRhNRnUTYTfi9eoDcxhjPFhYxK7qpK7UIvuCciZkh9+Axj5fVp0xijJ0otdbONf+0Ue/q4kahNPmbIAEzQfCVU3AF8crbQ9uJ19U+4D+4leW4uqcz4DnbpiP15U0B3phwnWT/ghDr/X/zv3Ldh5thqpMTp6yr7A5QI8fSKNxtHYs9bLNX+1eLvx8G1M2ZPwhFOw7o6EJXQNXrrFQcVaZ/zc2rksIJd9Pf1hBF7EetsGXwYWXR4JbnP1qxH7vNFOFGVbKMcWU4RwNnU1GPzhnjWdhbKp+sGNHAk4r3SUNsq6wmRg4jgYeGqYobzhPCFylG8zjYCegMh9iDCfIDtMtmikwy3rfIHUJ0rvoB3tPGeYL+dwUx4O7cNASfV464NbGIosE5KBkcN0H1j+2L8DaNP/8yDgih5A8BS3dsLyGv0kizE+pOmsUJUGDP6stemqa+JtnikQBSjN1PiN721JnT4R9K96EFqSadwMfw29ipw9g3roF1YND901PcXMmbopAc9vuEM2lo6fDngpxbZZXXaDfFkOatz9jKpI9UUIx0zo+A=
