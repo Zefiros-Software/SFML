@@ -16,6 +16,7 @@ global:
   - PROJECT=SFML
   - PROJECT_TEMPLATE=default
 install:
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libxrandr-dev libudev-dev; fi
 - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
 - cd test && zpm run test-definition SFML
