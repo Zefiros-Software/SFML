@@ -16,10 +16,9 @@ global:
   - PROJECT=SFML
   - PROJECT_TEMPLATE=default
 install:
-- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libxrandr-dev libudev-dev; fi
 - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
 - cd test && zpm run test-definition SFML
 notifications:
   slack:
-    secure: cNjwNj0fYnGjnR9EbNb5GyBHy4eOe3GJ1oEkUXIZ7U9y/kMowANxMnJmRb914XAO2uEA3o/z1adsxZOCoUB6TsjpZSR9aVMyYXimog6Z1J8XYF6+JilzaFCKUCiednFRhNRnUTYTfi9eoDcxhjPFhYxK7qpK7UIvuCciZkh9+Axj5fVp0xijJ0otdbONf+0Ue/q4kahNPmbIAEzQfCVU3AF8crbQ9uJ19U+4D+4leW4uqcz4DnbpiP15U0B3phwnWT/ghDr/X/zv3Ldh5thqpMTp6yr7A5QI8fSKNxtHYs9bLNX+1eLvx8G1M2ZPwhFOw7o6EJXQNXrrFQcVaZ/zc2rksIJd9Pf1hBF7EetsGXwYWXR4JbnP1qxH7vNFOFGVbKMcWU4RwNnU1GPzhnjWdhbKp+sGNHAk4r3SUNsq6wmRg4jgYeGqYobzhPCFylG8zjYCegMh9iDCfIDtMtmikwy3rfIHUJ0rvoB3tPGeYL+dwUx4O7cNASfV464NbGIosE5KBkcN0H1j+2L8DaNP/8yDgih5A8BS3dsLyGv0kizE+pOmsUJUGDP6stemqa+JtnikQBSjN1PiN721JnT4R9K96EFqSadwMfw29ipw9g3roF1YND901PcXMmbopAc9vuEM2lo6fDngpxbZZXXaDfFkOatz9jKpI9UUIx0zo+A=
+    secure: u1dsNU0vvguiQO/oKX/lhBnFNSVUrPV72jSpjlzeilt/1RmP6Ygt3iv68DtRQsP4hJN97VhDXtD66hCIQ72umcX01w4gAxTBaNajIuKeDErFWRZOoD3o49RSCLnSphBUxjhYTdLfThe1gMA6OMWmA+/hCkDNn31sNbyr+y13HpFt2HBwZr9pXgLWiPHNlXObUwA/IhU6j2/Jwb5EDZM4/y+XZCnarqPE10MX0odaYsriJNTw71JiPwrBbRygdXlNqzvTFCuwuv/Enwr3HzW/CjwYHOjVEBotfoxj+v6X4GzNODm+7wlfbhQaM/Hd1IVmO7uxpPdGu5RM9O3b2uu0GeuA9sSw2KnUeZxETPc8QJH46lkAl6qZzcAJ900sMtjrwhlHNu/d1IQgwlSe/diaxGSX9Le6+uXLNhwy0pGxK6VB79UWwHuu1zXlwm+oOmVFjC7CS0NMWxBD7g9EWfeN0LpY0SY9ldVsmp0z72YQM/L+0rMjNuuQhWuOle0u7tINXD4DVbzleaiJMJSaqI8ujhJMHrqHNvOB5T3t4ufAj+ozNNizlLcaiaoYx4l18i+etZboZBhW7hLYTXfYDAHS6QVcP2aQfohEUdEL/5wnAP/VBHHVk8MFuknE0+6X4g8ETe1th3En+b2Q1zPm8TeXXvCNKSDO2dql7WGtvACC4QE=

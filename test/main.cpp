@@ -27,7 +27,7 @@
 #include <SFML/System/Clock.hpp>
 #include <iostream>
 
-int main( int arv, const char **argv )
+int main(int arv, const char **argv)
 {
     sf::Clock clock; // starts the clock
 
